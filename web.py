@@ -52,7 +52,7 @@ def t(key, **kwargs):
 
 # --- Matplotlib 字体配置 ---
 import matplotlib.font_manager as fm
-FONT_PATH = 'simhei.ttf'
+FONT_PATH = 'SIMHEI.TTF'
 if os.path.exists(FONT_PATH):
     fm.fontManager.addfont(FONT_PATH)
     plt.rcParams['font.sans-serif'] = ['SimHei']
@@ -209,3 +209,4 @@ with col2:
     st.header(t("settings_header"))
     st.session_state.shipping_fee = st.number_input(t("shipping_input_label"), value=st.session_state.shipping_fee, min_value=0.0, step=1.0)
     st.download_button(t("download_button_label"), generate_table_image(), "commodity_table.png", "image/png")
+
